@@ -1,0 +1,12 @@
+### GET request para buscar todas as metas
+GET http://localhost:3333/goals?limit=4&page=1
+Content-Type: application/json
+
+### POST request para criar uma nova meta
+POST http://localhost:3333/goals
+Content-Type: application/json
+
+{
+  "title": "Exercitar-me",
+  "desiredWeeklyFrequency": 2
+}
