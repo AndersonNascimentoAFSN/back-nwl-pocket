@@ -2,11 +2,23 @@
 GET http://localhost:3333/goals?limit=4&page=1
 Content-Type: application/json
 
+### GET request para buscar todas as metas completadas na semana
+GET http://localhost:3333/pending-goals
+Content-Type: application/json
+
 ### POST request para criar uma nova meta
 POST http://localhost:3333/goals
 Content-Type: application/json
 
 {
-  "title": "Exercitar-me",
-  "desiredWeeklyFrequency": 2
+  "title": "Exercitar",
+  "desiredWeeklyFrequency": 3
+}
+
+### POST request para completar uma meta
+POST http://localhost:3333/goal-completions
+Content-Type: application/json
+
+{
+  "goalId": "b8k190cu2cd65u456phklq7i"
 }
