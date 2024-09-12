@@ -22,3 +22,7 @@ Content-Type: application/json
 {
   "goalId": "b8k190cu2cd65u456phklq7i"
 }
+
+### GET request para buscar ...
+GET http://localhost:3333/week-summary
+Content-Type: application/json
