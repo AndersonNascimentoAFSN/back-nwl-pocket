@@ -6,7 +6,8 @@
     "dev": "tsx watch --env-file .env src/http/server.ts",
     "seed": "tsx --env-file .env src/db/seed.ts",
     "lint": "npx @biomejs/biome check",
-    "lint:fix": "npx @biomejs/biome check --write ."
+    "lint:fix": "npx @biomejs/biome check --write .",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "Anderson Nascimento",
@@ -16,6 +17,7 @@
     "@biomejs/biome": "^1.8.3",
     "@types/node": "^22.5.4",
     "drizzle-kit": "^0.24.2",
+    "husky": "^9.1.6",
     "tsx": "^4.19.0",
     "typescript": "^5.6.2"
   },

@@ -1,7 +1,6 @@
 import dayjs from 'dayjs'
 import { client, db } from './index'
 import { goalCompletions, goals } from './schema'
-
 ;(async function seed() {
   await db.delete(goals)
   await db.delete(goalCompletions)
