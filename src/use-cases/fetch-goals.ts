@@ -1,22 +1,19 @@
-import { count } from "drizzle-orm";
-import { db } from "../db"
-import { goals } from "../db/schema"
+import { count } from 'drizzle-orm'
+import { db } from '../db'
+import { goals } from '../db/schema'
 
 interface FetchGoals {
   page: number
   limit: number
 }
 
-export async function fetchGoals({
-  page = 1,
-  limit = 10
-}: FetchGoals) {
-  const offset = (page - 1) * limit;
+export async function fetchGoals({ page = 1, limit = 10 }: FetchGoals) {
+  const offset = (page - 1) * limit
 
-  const [{ count: total }] = await db.select({ count: count() }).from(goals);
+  const [{ count: total }] = await db.select({ count: count() }).from(goals)
 
   // const results = await db.execute(
-  //   `SELECT *, COUNT(*) OVER() AS total 
+  //   `SELECT *, COUNT(*) OVER() AS total
   //    FROM goals
   //    ORDER BY id
   //    LIMIT $1 OFFSET $2`,

@@ -20,7 +20,15 @@ POST http://localhost:3333/goal-completions
 Content-Type: application/json
 
 {
-  "goalId": "b8k190cu2cd65u456phklq7i"
+  "goalId": "djpvshay60zimb4hjcdyq9ri"
+}
+
+### POST request para descompletar uma meta
+POST http://localhost:3333/undo-goal-completions
+Content-Type: application/json
+
+{
+  "goalCompletionId": "auyvwsb6sto20izjkrksfzmf"
 }
 
 ### GET request para buscar ...
