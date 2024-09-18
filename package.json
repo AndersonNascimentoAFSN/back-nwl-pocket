@@ -9,7 +9,8 @@
     "seed": "tsx --env-file .env src/db/seed.ts",
     "lint": "npx @biomejs/biome check",
     "lint:fix": "npx @biomejs/biome check --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy": "npm run build && npx drizzle-kit generate && npx drizzle-kit migrate"
   },
   "keywords": [],
   "author": "Anderson Nascimento",
